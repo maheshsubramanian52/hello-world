@@ -1,8 +1,18 @@
-<form action="action_page.php">
-  <div class="container">
-    <h1>Welcome to DevOps Learning</h1>
-    
-   <h1> Thankyou Buddy </h1>
-
-  
-</form>
+<html>
+<head><title>First JSP</title></head>
+<body>
+  <%
+    double num = Math.random();
+    if (num > 0.95) {
+  %>
+      <h2>You'll have a luck day!</h2><p>(<%= num %>)</p>
+  <%
+    } else {
+  %>
+      <h2>Well, life goes on ... </h2><p>(<%= num %>)</p>
+  <%
+    }
+  %>
+  <a href="<%= request.getRequestURI() %>"><h3>Try Again</h3></a>
+</body>
+</html>
